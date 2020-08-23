@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
+    <children>
+        <AnchorPane prefHeight="511.0" prefWidth="1063.0" style="-fx-background-color: #464646;">
+            <children>
+                <HBox fx:id="root" layoutY="-2.0" prefHeight="67.0" prefWidth="953.0" style="-fx-background-color: #2d2d2d;">
+                    <children>
+                  <TextFlow prefHeight="67.0" prefWidth="416.0">
+                     <children>
+                        <Text fx:id="topBannerWelcome" fill="#eff4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, " wrappingWidth="72.13671875">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="topBannerLabel" text="User" textFill="#eff4ff">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextFlow>
+                    </children>
+                </HBox>
+                <TableView fx:id="upcomingAppointmentsTableView" layoutX="309.0" layoutY="112.0" onMouseClicked="#modifyAppointmentClick" prefHeight="367.0" prefWidth="613.0" style="-fx-background-color: #cfcfcf;">
+                    <columns>
+                        <TableColumn fx:id="custNameColumn" prefWidth="103.0" text="Customer Name" />
+                        <TableColumn fx:id="startColumn" prefWidth="105.0" text="Start" />
+                        <TableColumn fx:id="endColumn" prefWidth="82.0" text="End" />
+                  <TableColumn fx:id="dateColumn" prefWidth="82.0" text="Date" />
+                  <TableColumn fx:id="typeColumn" prefWidth="124.0" text="Type" />
+                        <TableColumn fx:id="consultantNameColumn" prefWidth="77.0" text="Consultant" />
+                    </columns>
+                </TableView>
+                <Label fx:id="UpcomingAppointmentsLabel" layoutX="476.0" layoutY="67.0" text="Upcoming Appointments" textFill="#eff4ff">
+                    <font>
+                        <Font name="Droid Sans" size="26.0" />
+                    </font>
+                </Label>
+                <Line endX="852.0" layoutX="101.0" layoutY="65.0" startX="-100.0" stroke="#eff4ff" />
+            <AnchorPane layoutY="67.0" prefHeight="436.0" prefWidth="269.0">
+               <children>
+                        <Button fx:id="appointmentDash" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#onActionAppointmentDash" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #603cba;" text="Appointment Dashboard" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                        <Button fx:id="customerDash" cancelButton="true" layoutX="14.0" layoutY="116.0" mnemonicParsing="false" onAction="#onActionCustomerDash" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #00a300;" text="Customer Dashboard" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                        <Button fx:id="generateReports" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" onAction="#onActionGenerateReports" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #da532c;" text="Generate Reports" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+                        <Button fx:id="logOff" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#onActionLogOff" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #b91d47;" text="Log Off" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

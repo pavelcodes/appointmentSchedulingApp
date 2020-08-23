@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.CustomerDashboardController">
+    <children>
+        <AnchorPane fx:id="searchCustomersField" prefHeight="511.0" prefWidth="1063.0" style="-fx-background-color: #464646;">
+            <children>
+                <HBox fx:id="root" layoutY="-2.0" prefHeight="67.0" prefWidth="953.0" style="-fx-background-color: #2d2d2d;">
+                    <children>
+                  <TextFlow prefHeight="67.0" prefWidth="416.0">
+                     <children>
+                        <Text fx:id="topBannerCustomerDash" fill="#eff4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Dashboard" wrappingWidth="72.13671875">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextFlow>
+                    </children>
+                </HBox>
+                <TableView fx:id="customerTableView" layoutX="309.0" layoutY="112.0" prefHeight="367.0" prefWidth="613.0" style="-fx-background-color: #cfcfcf;">
+                    <columns>
+                        <TableColumn fx:id="custIDColumn" prefWidth="38.0" text="ID" />
+                        <TableColumn fx:id="custNameColumn" prefWidth="131.0" text="Name" />
+                        <TableColumn fx:id="custAddressColumn" prefWidth="140.0" text="Address" />
+                  <TableColumn fx:id="custCityColumn" minWidth="0.0" prefWidth="106.0" text="City" />
+                  <TableColumn fx:id="custCountryColumn" minWidth="0.0" prefWidth="103.0" text="Country" />
+                        <TableColumn fx:id="custPhoneColumn" minWidth="0.0" prefWidth="94.0" text="Phone" />
+                    </columns>
+                </TableView>
+                <Label fx:id="UpcomingAppointmentsLabel" layoutX="476.0" layoutY="67.0" textFill="#eff4ff">
+                    <font>
+                        <Font name="Droid Sans" size="26.0" />
+                    </font>
+                </Label>
+                <Line endX="852.0" layoutX="101.0" layoutY="65.0" startX="-100.0" stroke="#eff4ff" />
+            <AnchorPane layoutY="67.0" prefHeight="436.0" prefWidth="269.0">
+               <children>
+                        <Button fx:id="addNewCustomer" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#onActionAddNewCustomer" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #603cba;" text="Add New" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
+                        <Button fx:id="modifyCustomer" cancelButton="true" layoutX="14.0" layoutY="116.0" mnemonicParsing="false" onAction="#onActionModifyCustomer" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #00a300;" text="Modify" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                        <Button fx:id="deleteCustomer" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #da532c;" text="Delete" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+                        <Button fx:id="back" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#onActionBack" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #b91d47;" text="Back" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="search" layoutX="309.0" layoutY="74.0" onKeyPressed="#search" prefHeight="31.0" prefWidth="253.0" promptText="Search Customers" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

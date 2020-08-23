@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.Report3">
+    <children>
+        <AnchorPane fx:id="searchCustomersField" prefHeight="511.0" prefWidth="1063.0" style="-fx-background-color: #464646;">
+            <children>
+                <HBox fx:id="root" layoutY="-2.0" prefHeight="67.0" prefWidth="953.0" style="-fx-background-color: #2d2d2d;">
+                    <children>
+                  <TextFlow prefHeight="110.0" prefWidth="919.0">
+                     <children>
+                        <Text fx:id="topBannerCustomerDash" fill="#eff4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Report: Number of appointment types by month" wrappingWidth="814.9404296875">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextFlow>
+                    </children>
+                </HBox>
+            <TableView fx:id="appointmentTableView" layoutX="298.0" layoutY="100.0" prefHeight="367.0" prefWidth="613.0" style="-fx-background-color: #cfcfcf;">
+               <columns>
+                  <TableColumn fx:id="yearColumn" prefWidth="137.0" text="Year" />
+                  <TableColumn fx:id="typeColumn" prefWidth="145.0" text="Appointment Type" />
+                  <TableColumn fx:id="totalColumn" prefWidth="60.0" sortable="false" text="Total" />
+               </columns>
+            </TableView>
+                <Label fx:id="UpcomingAppointmentsLabel" layoutX="476.0" layoutY="67.0" textFill="#eff4ff">
+                    <font>
+                        <Font name="Droid Sans" size="26.0" />
+                    </font>
+                </Label>
+                <Line endX="852.0" layoutX="101.0" layoutY="65.0" startX="-100.0" stroke="#eff4ff" />
+            <AnchorPane layoutX="1.0" layoutY="65.0" prefHeight="436.0" prefWidth="269.0">
+               <children>
+                        <Button fx:id="back" layoutX="16.0" layoutY="53.0" mnemonicParsing="false" onAction="#onActionBack" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #b91d47;" text="Back" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

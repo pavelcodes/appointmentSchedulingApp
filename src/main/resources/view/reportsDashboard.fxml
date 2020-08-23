@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ReportsDashboardController">
+    <children>
+        <AnchorPane prefHeight="511.0" prefWidth="511.0" style="-fx-background-color: #464646;">
+            <children>
+                <HBox fx:id="root" layoutY="-2.0" prefHeight="67.0" prefWidth="491.0" style="-fx-background-color: #2d2d2d;">
+                    <children>
+                  <TextFlow prefHeight="67.0" prefWidth="488.0">
+                     <children>
+                        <Text fx:id="topBannerReports" fill="#eff4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports" wrappingWidth="72.13671875">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextFlow>
+                    </children>
+                </HBox>
+                <Line endX="389.0" layoutX="101.0" layoutY="65.0" startX="-100.0" stroke="#eff4ff" />
+            <AnchorPane layoutY="67.0" prefHeight="436.0" prefWidth="490.0">
+               <children>
+                        <Button fx:id="consultantScheduleReport" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#onActionConsultantScheduleReport" prefHeight="83.0" prefWidth="463.0" style="-fx-background-color: #603cba;" text="The schedule for each consultant" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                        <Button fx:id="appointmentTypeByMonthReport" cancelButton="true" layoutX="14.0" layoutY="116.0" mnemonicParsing="false" onAction="#onActionAppointmentTypeByMonthReport" prefHeight="83.0" prefWidth="463.0" style="-fx-background-color: #00a300;" text="Number of appointment types by month" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                        <Button fx:id="AditionalReport" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" onAction="#onActionAppointmentTypeByYearReport" prefHeight="83.0" prefWidth="463.0" style="-fx-background-color: #da532c;" text="Number of appointment types by year" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                        <Button fx:id="back" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#onActionBack" prefHeight="83.0" prefWidth="463.0" style="-fx-background-color: #b91d47;" text="Back" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

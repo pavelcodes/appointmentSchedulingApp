@@ -1,0 +1,3 @@
+rootProject.name = 'ScheduleNotifications'
+include 'main_project'
+

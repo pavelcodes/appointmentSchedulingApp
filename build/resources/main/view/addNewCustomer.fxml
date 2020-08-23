@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddNewCustomerController">
+    <children>
+        <AnchorPane fx:id="searchCustomersField" prefHeight="421.0" prefWidth="793.0" style="-fx-background-color: #464646;">
+            <children>
+                <HBox fx:id="root" layoutY="-2.0" prefHeight="67.0" prefWidth="771.0" style="-fx-background-color: #2d2d2d;">
+                    <children>
+                  <TextFlow prefHeight="67.0" prefWidth="416.0">
+                     <children>
+                        <Text fx:id="topBannerCustomers" fill="#eff4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Customer" wrappingWidth="72.13671875">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextFlow>
+                    </children>
+                </HBox>
+                <Line endX="670.0" layoutX="101.0" layoutY="65.0" startX="-100.0" stroke="#eff4ff" />
+            <AnchorPane layoutY="86.0" prefHeight="310.0" prefWidth="269.0">
+               <children>
+                        <Button fx:id="saveNewCustomer" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#onActionSaveNewCustomer" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #603cba;" text="Save" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
+                        <Button fx:id="back" layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#onActionBack" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #b91d47;" text="Back" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <GridPane layoutX="297.0" layoutY="86.0" prefHeight="310.0" prefWidth="456.0" style="-fx-border-width: 1px; -fx-border-color: #000000; -fx-border: 1px;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="custNameLabel" text="Name" textFill="#eff4ff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="address1Label" text="Address 1" textFill="#eff4ff" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="address2Label" text="Address 2" textFill="#eff4ff" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cityLabel" text="City" textFill="#eff4ff" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="postalCodeLabel" layoutX="16.0" layoutY="214.0" text="Postal Code" textFill="#eff4ff" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countryLabel" text="Country" textFill="#eff4ff" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="phoneLabel" layoutX="16.0" layoutY="250.0" text="Phone" textFill="#eff4ff" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reminderLabel" text="SMS Reminder" textFill="#eff4ff" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="custNameField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="230.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="address1Field" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="address2Field" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="232.0" promptText="Apt, suite, etc (optional)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="cityField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="232.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="postalCodeField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="231.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="countryField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="232.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="phoneField" layoutX="134.0" layoutY="247.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="229.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <CheckBox fx:id="smsReminder" mnemonicParsing="false" prefHeight="36.0" prefWidth="237.0" text="Yes" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </GridPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

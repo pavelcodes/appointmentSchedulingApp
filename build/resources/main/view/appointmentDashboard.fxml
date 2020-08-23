@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AppointmentDashboardController">
+    <children>
+        <AnchorPane fx:id="searchCustomersField" prefHeight="511.0" prefWidth="1063.0" style="-fx-background-color: #464646;">
+            <children>
+                <HBox fx:id="root" layoutY="-2.0" prefHeight="67.0" prefWidth="953.0" style="-fx-background-color: #2d2d2d;">
+                    <children>
+                  <TextFlow prefHeight="67.0" prefWidth="544.0">
+                     <children>
+                        <Text fx:id="topBannerAppointments" fill="#eff4ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Dashboard" wrappingWidth="72.13671875">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextFlow>
+                    </children>
+                </HBox>
+                <TableView fx:id="appointmentTableView" layoutX="309.0" layoutY="112.0" prefHeight="367.0" prefWidth="613.0" style="-fx-background-color: #cfcfcf;">
+                    <columns>
+                        <TableColumn fx:id="custNameColumn" prefWidth="131.0" text="Customer Name" />
+                        <TableColumn fx:id="startColumn" prefWidth="74.0" text="Start" />
+                  <TableColumn fx:id="endColumn" prefWidth="64.0" text="End" />
+                  <TableColumn fx:id="dateColumn" prefWidth="97.0" text="Date" />
+                        <TableColumn fx:id="typeColumn" prefWidth="122.0" text="Type" />
+                  <TableColumn fx:id="consultantNameColumn" prefWidth="124.0" text="Consultant" />
+                    </columns>
+                </TableView>
+                <Label fx:id="UpcomingAppointmentsLabel" layoutX="476.0" layoutY="67.0" textFill="#eff4ff">
+                    <font>
+                        <Font name="Droid Sans" size="26.0" />
+                    </font>
+                </Label>
+                <Line endX="852.0" layoutX="101.0" layoutY="65.0" startX="-100.0" stroke="#eff4ff" />
+            <AnchorPane layoutY="67.0" prefHeight="436.0" prefWidth="269.0">
+               <children>
+                        <Button fx:id="addNewAppointment" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#onActionAddNewAppointment" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #603cba;" text="Add New" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
+                        <Button fx:id="modifyAppointment" cancelButton="true" layoutX="14.0" layoutY="116.0" mnemonicParsing="false" onAction="#onActionModifyAppointment" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #00a300;" text="Modify" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                        <Button fx:id="deleteCustomer" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #da532c;" text="Delete" textAlignment="CENTER" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+                        <Button fx:id="back" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#onActionBack" prefHeight="83.0" prefWidth="237.0" style="-fx-background-color: #b91d47;" text="Back" textFill="#eff4ff">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="309.0" layoutY="71.0" prefHeight="31.0" prefWidth="176.0" text="Sort Calendar By:" textFill="#eff4ff">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="22.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="sortByAllRadio" layoutX="485.0" layoutY="78.0" mnemonicParsing="false" onAction="#onActionSortByAll" selected="true" style="-fx-selected-color: #000000; -fx-unselected-color: #eff4ff;" text="All" textFill="#eff4ff">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="sortCalendarTG" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="sortByMonthRadio" layoutX="544.0" layoutY="78.0" mnemonicParsing="false" onAction="#onActionSortByMonth" text="Month" textFill="#eff4ff" toggleGroup="$sortCalendarTG">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="sortByWeekRadio" layoutX="630.0" layoutY="78.0" mnemonicParsing="false" onAction="#onActionSortByWeek" text="Week" textFill="#eff4ff" toggleGroup="$sortCalendarTG">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
